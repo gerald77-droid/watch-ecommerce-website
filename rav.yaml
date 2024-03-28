@@ -13,7 +13,7 @@ scripts:
     - npm install
   win_freeze: python -m pip freeze
   vendor_pull:
-    - rm -rf src/static/vendor
+    - rm -rf src\static\vendor
     - mkdir -p src/static/vendor/htmx/
     - mkdir -p src/static/vendor/flowbite/
     - curl -L https://unpkg.com/htmx.org@1.8.2 -o ./src/static/vendor/htmx/htmx.min.js

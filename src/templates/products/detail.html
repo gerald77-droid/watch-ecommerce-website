@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="flex flex-col lg:flex-row m-12 p-12">
+
+	<div class="w-full md:w-3/4">
+		<p>{{product.name}}</P>
+		
+		<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Time Mastery: <span class="text-blue-600 dark:text-blue-500">{{product.description}}</span> – Where Elegance Meets Precision</h1>
+		<p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">The {{product.name}} combines sophistication and innovation with features like dual time zones, annual calendar, and a luxurious Oyster case, setting new standards in horological excellence</p>
+	
+		
+		
+			{% include 'products/attachment_table.html' with product_images=product_images is_owner=is_owner %}
+		
+
+
+	</div>
+	
+	<div class="w-full md:w-1/4 ">
+		{% if is_owner %}
+		{% else %}
+		<div>
+			{% include 'purchases/buy-btn-form.html' with product=product %}
+				
+		</div>
+		{% endif %}	
+			{% if product.image %}
+				<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+					
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="{{product.image.url}}" alt="">
+						</div>
+				
+					
+				</div>
+		</div>
+		{% endif %}	
+		
+		{% if form %}
+
+		<h3>Update Product</h3>
+
+		<form method="POST" action="" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button type="submit" class="btn-submit">Submit</button>
+
+		</form>
+
+		{% endif %}
+	</div>	
+</div>
+
+
+
+{% endblock %}
