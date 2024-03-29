@@ -1,11 +1,8 @@
 # watch-ecommerce
-Learn how to build a Micro eCommerce Web App with Python and Serverless Postgres
+This is an end to end eCommerce website built using Flowbite(for Tailwind css), Vanilla Javascript, Django Framework.
+Integrated with payment APIs; Stripe and Daraja API(M-pesa).
+We have used a PostgreSQL serveless database.
 
-
-## Prerequisites
-- Python experience with [30 Days of Python](https://www.codingforentrepreneurs.com/courses/30-days-python-38/) or similiar
-- Django experience with [Try Django](https://www.codingforentrepreneurs.com/courses/try-django-3-2/) or similiar
-- Basic understanding of HTML and CSS
 
 ## Required Software
 - [Python 3.10](https://www.python.org/downloads/) or newer
@@ -18,12 +15,12 @@ Learn how to build a Micro eCommerce Web App with Python and Serverless Postgres
 ```bash
 mkdir -p ~/dev
 cd ~/dev
-git clone https://github.com/codingforentrepreneurs/micro-ecommerce
+git clone https://github.com/gerald77-droid/watch-ecommerce-website
 cd micro-ecommerce
 git checkout start
 ```
 
-To install packages and run various command shortcuts, we use [rav](https://github.com/jmitchel3/rav). Open `rav.yaml` to see the various commands available if you prefer to not use `rav`.
+
 
 _macOS/Linux Users_
 ```bash
