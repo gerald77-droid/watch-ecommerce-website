@@ -1,7 +1,7 @@
 # watch-ecommerce
 This is an end to end eCommerce website built using Flowbite(for Tailwind css), Vanilla Javascript, Django Framework.
 Integrated with payment APIs; Stripe and Daraja API(M-pesa).
-We have used a PostgreSQL serveless database to enhance scalability and reliability.
+We have used a PostgreSQL serverless database to enhance scalability and reliability.
 
 
 ## Required Software
